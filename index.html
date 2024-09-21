@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudio de MRU y MRUV</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Estudio de MRU y MRUV</h1>
+  </header>
+
+  <div class="container">
+    <!-- Menú de navegación lateral -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#" onclick="showSection('inicio')">Inicio</a></li>
+        <li><a href="#" onclick="showSection('mru')">MRU</a></li>
+        <li><a href="#" onclick="showSection('mruv')">MRUV</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="content">
+      <!-- Sección de inicio -->
+      <section id="inicio" class="active">
+        <h2>¿Qué es el movimiento rectilíneo uniforme?</h2>
+        <p>El movimiento rectilíneo uniforme (M.R.U.) describe el desplazamiento de un objeto en una sola dirección con una velocidad y tiempo constante en una determinada distancia.
+
+          En física, el movimiento rectilíneo uniforme puede ser observado dentro de un plano, en un eje de coordenadas, donde el movimiento es en línea recta desplazándose hacia una dirección. Es uniforme porque las variables de velocidad y tiempo en la recta es constante.
+          
+          Las fórmulas del movimiento rectilíneo uniforme contempla tres incógnitas: Velocidad constante (V), Distancia (d) y Tiempo (t). La fórmula principal teniendo de incógnita la velocidad constante es la siguiente:</p>
+        <img src="./image/mru.png" alt="Estudio de Física"> <br><br>
+        <h2>¿Qué es el movimiento rectilinio uniforme variado?</h2>
+        <p>Como su nombre indica, es un tipo de movimiento rectilíneo uniformemente variado, es decir el móvil se desplaza en una trayectoria recta y su velocidad varia de manera uniforme o constante en cada unidad de tiempo que transcurre, ya sea aumentando o disminuyendo, esto gracias a la acción de la aceleración.</p>
+        <img src="./image/mruv.png" alt="">
+      </section>
+
+      <!-- Sección MRU -->
+      <section id="mru">
+        <h2>Movimiento Rectilíneo Uniforme (MRU)</h2>
+        <p>El MRU es un tipo de movimiento donde un cuerpo se desplaza en línea recta a velocidad constante.</p>
+        <img src="./image/formulas mru.png" alt="MRU"> <br><br>
+
+        <!-- Cálculo de Velocidad -->
+        <div class="calculo">
+          <h3>Cálculo de Velocidad</h3>
+          <p>La velocidad en MRU se obtiene dividiendo la distancia (d) entre el tiempo (t). Fórmula: <code>v = d / t</code></p>
+          <form id="velocidad-form">
+            <label for="distancia-velocidad">Distancia (m):</label>
+            <input type="number" id="distancia-velocidad" required>
+            <label for="tiempo-velocidad">Tiempo (s):</label>
+            <input type="number" id="tiempo-velocidad" required>
+            <div id="resultado-velocidad">Resultado: </div>
+            <button type="button" onclick="calcularVelocidad()">Calcular Velocidad</button>
+          </form>
+        </div>
+        <br><br><br>
+        <!-- Cálculo de Tiempo -->
+        <div class="calculo">
+          <h3>Cálculo de Tiempo</h3>
+          <p>El tiempo se calcula dividiendo la distancia (d) entre la velocidad (v). Fórmula: <code>t = d / v</code></p>
+          <form id="tiempo-form">
+            <label for="distancia-tiempo">Distancia (m):</label>
+            <input type="number" id="distancia-tiempo" required>
+            <label for="velocidad-tiempo">Velocidad (m/s):</label>
+            <input type="number" id="velocidad-tiempo" required>
+            <div id="resultado-tiempo">Resultado: </div>
+            <button type="button" onclick="calcularTiempo()">Calcular Tiempo</button>
+          </form>
+        </div>
+        <br><br><br>
+        <!-- Cálculo de Distancia -->
+        <div class="calculo">
+          <h3>Cálculo de Distancia</h3>
+          <p>La distancia se calcula multiplicando la velocidad (v) por el tiempo (t). Fórmula: <code>d = v * t</code></p>
+          <form id="distancia-form">
+            <label for="velocidad-distancia">Velocidad (m/s):</label>
+            <input type="number" id="velocidad-distancia" required>
+            <label for="tiempo-distancia">Tiempo (s):</label>
+            <input type="number" id="tiempo-distancia" required>
+            <div id="resultado-distancia">Resultado: </div>
+            <button type="button" onclick="calcularDistancia()">Calcular Distancia</button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- Sección MRUV -->
+      <section id="mruv">
+        <h2>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h2>
+        <p>El MRUV es un tipo de movimiento donde un cuerpo acelera o desacelera a una tasa constante.</p>
+<br><br>      
+            <!-- Cálculo de Velocidad Final -->
+          <!-- Cálculo de Velocidad Final -->
+<div class="calculo">
+    <h3>Cálculo de Velocidad Final</h3>
+    <form id="mruv-form">
+        <label for="velocidad-inicial">Velocidad Inicial (m/s):</label>
+        <input type="number" id="velocidad-inicial" required>
+        <label for="aceleracion">Aceleración (m/s²):</label>
+        <input type="number" id="aceleracion" required>
+        <label for="tiempo-mruv">Tiempo (s):</label>
+        <input type="number" id="tiempo-mruv" required>
+        <div id="resultado-velocidad-final">Resultado: </div>
+        <button type="button" onclick="calcularVelocidadFinalMRUV()">Calcular</button>
+    </form>
+</div>
+<br><br> 
+<!-- Cálculo de Tiempo -->
+<div class="calculo">
+    <h3>Cálculo de Tiempo</h3>
+    <form id="tiempo-form-mruv">
+        <label for="velocidad-final">Velocidad Final (m/s):</label>
+        <input type="number" id="velocidad-final" required>
+        <label for="velocidad-inicial-tiempo">Velocidad Inicial (m/s):</label>
+        <input type="number" id="velocidad-inicial-tiempo" required>
+        <label for="aceleracion-tiempo">Aceleración (m/s²):</label>
+        <input type="number" id="aceleracion-tiempo" required>
+        <div id="resultado-tiempo-mruv">Resultado: </div>
+        <button type="button" onclick="calcularTiempoMRUV()">Calcular Tiempo</button>
+    </form>
+</div><br><br> 
+
+<div class="calculo"></div>
+    <h3>Cálculo de Distancia</h3>
+    <form id="distancia-form-mruv">
+        <label for="velocidad-inicial-distancia">Velocidad Inicial (m/s):</label>
+<input type="number" id="velocidad-inicial-distancia" required>
+
+<label for="aceleracion-distancia">Aceleración (m/s²):</label>
+<input type="number" id="aceleracion-distancia" required>
+
+<label for="tiempo-distancia">Tiempo (s):</label>
+<input type="number" id="tiempo-distancia" required>
+
+<div id="resultado-distancia-mruv">Resultado: </div>
+        <button type="button" onclick="calcularDistanciaMRUV()">Calcular Distancia</button>
+    </form>
+</div>
+            
+        </section>
+    
+  </div>
+
+  <footer>
+    <p>christian Tomas Ajanel Ajanel 2290-20-21920</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #F0F4F8;
+}
+
+/* Header y footer */
+header, footer {
+  background-color: #007ACC;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+footer {
+  width: 100%;
+}
+
+/* Contenedor principal */
+.container {
+  flex: 1; /* Permite que el contenedor ocupe el espacio restante */
+  display: flex;
+  min-height: 0; /* Permite que el contenedor se ajuste al espacio disponible */
+}
+
+/* Menú de navegación lateral */
+.sidebar {
+  background-color: #005B99;
+  padding: 20px;
+  width: 200px;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  position: fixed; /* Fijo en la pantalla */
+  left: 0; /* Posicionado a la izquierda */
+  top: 0; /* Comienza desde la parte superior */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Permite el scroll si el contenido es largo */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Eliminar márgenes para evitar desplazamiento */
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Ajuste para el contenido principal */
+main {
+  flex-grow: 1;
+  margin-left: 220px; /* Deja espacio para la barra lateral */
+  padding: 20px;
+  overflow-y: auto; /* Permite el scroll si el contenido es largo */
+}
+
+main section {
+  display: none;
+}
+
+main section.active {
+  display: block;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+}
+
+form button {
+  padding: 10px;
+  background-color: #FF6F61;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #FF4C3B;
+}
